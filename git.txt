@@ -1,10 +1,17 @@
 1) If error proxy:
 	1) git config --global --unset http.proxy
+	2) proxy -p
+	3) If their is an error to unset proxy then
+		proxy -p
+		unset HTTP_PROXY
+		unset HTTPS_PROXY
+		check ~/.bashrc
 
 2) To add files into repo using CLI:
 	git clone url
-	git add filename
+	git add filename or .
 	git commit -m "comment"
+	git remote add origin https://github.com/ShwetaRPawar/DEMO.git or url
 	git push origin master
 	
 3) List all information about username n all:
