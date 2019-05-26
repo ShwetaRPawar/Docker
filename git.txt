@@ -8,7 +8,8 @@
 		check ~/.bashrc
 
 2) To add files into repo using CLI:
-	git clone url
+	//git clone url
+	git init
 	git add filename or .
 	git commit -m "comment"
 	git remote add origin https://github.com/ShwetaRPawar/DEMO.git or url
