@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  vars: 
+    content_txt: "hello.... shweta"
+
+  tasks:
+  - copy:
+     dest: /tmp/sp.txt
+     content: "{{content_txt}}"
+
+- hosts: sp
+  vars: 
+    file_name: ana.c
+  tasks: 
+  - debug:
+     msg: "{{file_name}}"
+  - command: rm -rf friend
+  - command: mkdir friend
+  - copy: src=/home/shweta/{{file_name}} dest=/home/shweta/friend
+

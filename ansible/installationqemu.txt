@@ -1,0 +1,48 @@
+Install qemu
+	sudo apt-get install qemu
+Give HDD size to qemu image:
+	qemu-img create qemu.img 10G
+To install ubuntu img:
+	qemu-system-x86_64 -hda qemu.img -boot d -cdrom ubuntu-16.04.5-desktop-amd64.iso -m 1024
+To open
+	qemu-system-x86_64 -hda qemu.img -m 1024
+To open with port change
+	qemu-system-x86_64 -hda qemu.img -m 1024 -net nic,model=virtio -net user,hostfwd=tcp::2222-:22
+
+
+
+keyless ssh:
+sudo apt-get install ansible
+
+ansible means "suppose if we want to install mysql on group of 5 machines then without installing separatly on 5 machine just take ip address of all 5 machin and put all those ip addresss into local /etc/ansible/hosts file and gives username to all these ip address"
+
+eg.
+write sudo gedit /etc/ansible/hosts
+in hosts file write
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+[sp] //usrname
+192.168.122.178 ansible_ssh_user=shweta //ip address of remote machins
+
+
+if their is some error in connection then install
+	sudo apt-get install python-minimal 
+into remote host as well as local host
+
+ansible shailesh --list-hosts
+ansible shailesh -m setup
+
+ansible sp -m ping -u shweta
+
+ansible sj -m copy -a "src=source path  dest=/tmp" -u shailesh
+ansible rc -m file -a "dest=/tmp/sample.txt state=touch"
+ansible rc -m command -a 'ls'
+ansible rc -m command -a 'ls' > op.txt
+ansible rc -m command -a 'ls' //-u hostname of remote
+ansible rc -m command -a "sudo apt-get install wget -y"
+
+to check s\w installed
+ansible rc -m shell -a 'apt list --installed | grep httpd'
+
+
+

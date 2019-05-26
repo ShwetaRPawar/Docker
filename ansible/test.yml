@@ -1,0 +1,10 @@
+---
+ #play-1
+ - hosts: sp
+   tasks:
+   - copy: src=/home/shweta/DOS/ansible/test.yml dest=/home/shweta
+   - command: touch /home/shweta/jadiii
+   - command: rm /home/shweta/jadiii
+   - command: cat /home/shweta/test.yml
+   - command: sudo apt-get install ansible
+ 

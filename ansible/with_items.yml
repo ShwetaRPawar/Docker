@@ -1,0 +1,35 @@
+# without loop create multiple directries
+
+---
+#- hosts: all
+#  tasks:
+#  - name: if exists dir then 1st delete
+#    command: rm -rf /tmp/dir1
+#  - name: if exists dir then 1st delete
+#    command: rm -rf /tmp/dir2
+  
+#  - name: "this will create dir1"
+#    command: mkdir /tmp/dir1
+#  - name: "this will create dir1"
+#    command: mkdir /tmp/dir2
+ 
+
+# with loop create multiple dir's
+
+#- hosts: all
+#  tasks:
+#  - name: this create multiple directries
+#    command: mkdir /tmp/"{{item}}"
+#    with_items:
+#    - dir3
+#    - dir4
+
+# with loop delete multiple dir's
+
+- hosts: all
+  tasks:
+  - name: hello
+    command: rm -rf /tmp/"{{item}}"
+    with_items:
+    - dir1
+    - dir2

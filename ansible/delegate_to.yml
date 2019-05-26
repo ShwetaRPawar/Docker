@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+  - command: mkdir /tmp/sp
+    delegate_to: sp

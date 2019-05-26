@@ -1,0 +1,72 @@
+1) If error proxy:
+	1) git config --global --unset http.proxy
+
+2) To add files into repo using CLI:
+	git clone url
+	git add filename
+	git commit -m "comment"
+	git push origin master
+	
+3) List all information about username n all:
+	1) git config --list
+
+4) To add origin:
+	git config add origin
+
+5) To add new user to a perticular repository:
+		git config user.name "name of user"
+
+6) If we add user using global then this user display to all repository
+
+7) Display current branch:
+	git branch
+
+8) To create new branch:
+	git checkout -b newbranch
+	git branch
+
+9) Only to switch from 1 branch to other
+	git checkout master or nameofbranch
+
+10) Delete the branch:
+		1) go to another branch then
+			git branch -d nameofbranch
+
+11) To push code in perticular branch:
+	git push origin newbranch
+
+---local stering remote
+
+12) To remove all changes which we was do in file and disply original file without new i.e undo all changes
+	git stash
+13) For redo
+	git stash pop
+
+14) If some named file is on repo and suppose i m doing some changes in that file from remote and also from local .if i m pushing this file 	then it give m error so to avoid this 1st we have to pull all changes from remote and then merge all changes from remote as well as 
+	local
+	1) add something into file from local
+	2) git add filename
+	3) git status
+	4) git commit -m "commit"
+	5) git push origin bname
+		it give an error
+		
+	6) git pull origin newbranch
+	 follow steps from 2 to 5
+
+15) To get difference bet 2 branch
+	git diff bname1 banme2
+
+16) Where we want to merge branch 1st we have to go to this branch eg
+		git checkout master or bname
+	after that merge the branch which want to merge
+		git merge bname
+
+17) Display all commit info:
+	git log
+
+18) Used to delete branch from repo:
+	git push origin --delete newbranch
+
+19) To download commits,files,and refs from remote repo into your local repo
+	git fetch

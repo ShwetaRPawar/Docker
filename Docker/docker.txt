@@ -1,0 +1,71 @@
+ sudo apt-get install -y docker
+sudo apt install docker.io
+docker
+
+
+sudo docker exec -it shweta /bin/bash or sudo docker attach shweta = used to execute already created container
+
+sudo docker pull shweta  
+			 =  used to pull the image from registry/docker hub into docker_hosts and execute image and create container
+
+sudo docker ps -a         
+			 = uesd to display all running containers
+
+sudo docker start shweta 
+			 =start the docker container
+
+sudo docker run --name shweta -it ubuntu  
+			 = it check image in docker_hosts if it is not found in docker_hosts then pull from registry to docker_hosts
+			   and execute image and crate container with name shweta and open that container in iterative mode
+
+sudo docker pause shweta 
+			= suppose if u create ubuntu container and this container is running then this running container gets puased
+
+sudo docker unpause shweta
+			= unpaused container
+
+sudo docker top shweta 
+			= you see top processes from container
+
+sudo docker kill shweta
+			=it kill the running container
+
+sudo docker rm shweta
+			=it remove the container
+
+
+
+************** create docker image  *****************
+
+1. create own docker file
+
+2. sudo docker build -t myimge:1.0 . or path of doker file 
+			=build docker image from docker file. -t means tagging the specific name
+
+3. docker images
+			=disply all docker images
+
+4. sudo docker run docker_image_id
+			=execute docker image that we created
+
+
+
+
+
+1)To open Google Cloud account
+	sign up
+	go compute engine
+	VM instances
+	create instance
+	write key created using keygen .pub
+	create
+	ping with ip address
+	ssh ip address
+	sudo su
+	cd
+	create file
+	run file
+	go to cloud ssh
+	sudo su
+	cd
+	run file	

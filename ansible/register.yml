@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - command: ls /tmp/
+    register: op_of_touch
+  - debug:
+     msg: "output of touch {{op_of_touch}}"
+  

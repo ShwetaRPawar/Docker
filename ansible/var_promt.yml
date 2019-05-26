@@ -1,0 +1,10 @@
+# read variable from command line
+
+---
+- hosts: all
+  vars_prompt: 
+   name: var1
+   prompt: "Enter value:"
+  tasks:
+  - debug:
+     msg: "your output is :{{var1}}"

@@ -1,0 +1,8 @@
+---
+- name: Network Getting Started First Playbook
+  hosts: all
+  tasks:
+  - name: command
+    command: cat /etc/rc.local
+    
+ 

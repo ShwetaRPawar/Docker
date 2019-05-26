@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+  - name: This will check condition
+    copy:
+      dest: /tmp/client.txt
+      content: "File is created based on expression."
+    when: false
+  - command:  mkdir /tmp/s4
+    register: result
+    ignore_errors: false
+
+  - command:  mkdir /tmp/s3
+    when: result is failed
+
+  - command:  mkdir /tmp/s2
+    when: result is succeeded
+
+  - command:  mkdir /tmp/s1
+    when: result is skipped
+
