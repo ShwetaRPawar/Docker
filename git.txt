@@ -2,7 +2,7 @@
 	1) git config --global --unset http.proxy
 	2) proxy -p
 	3) If their is an error to unset proxy then
-		proxy -p
+		export -p
 		unset HTTP_PROXY
 		unset HTTPS_PROXY
 		check ~/.bashrc
@@ -20,7 +20,7 @@ when we update the file after we push it into git then we do following
 		git status
 		git commit -m "comment"
 		git push origin master
-
+	
 3) List all information about username n all:
 	1) git config --list
 
@@ -84,3 +84,12 @@ when we update the file after we push it into git then we do following
 
 19) To download commits,files,and refs from remote repo into your local repo
 	git fetch
+	for eg i m creating new branch and in that add one file from remote repo. after that from CLI i m executing 
+			git checkout branchname/fetch 	
+	then it gives an error 'fetch' did not match any file(s) known to git. to avoid this execute
+			git fetch
+	it fetch all change do on remote repo to local and synchonize it after that execute
+		git checkout bname/fetch
+
+20) Suppose i m crating new file from remote repo then this file can fetch in local repo by
+	git pull origin master
